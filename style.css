@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+header{
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.356);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+   
+
+    backdrop-filter: blur(4px) saturate(110%);
+
+    position: fixed;
+    z-index: 2;
+}
+.space{
+    width: 100%;
+    height: 83.5px;
+    margin-bottom: 70px;
+}
+/* header::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: red;
+} */
+.web-name{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Rubik Mono One', monospace;
+    color: black;
+}
+.nav ul{
+    display: flex;
+    gap: 20px;
+}
+.nav ul li a{
+    color: black;
+    font-size: 16px;
+}
+.nav ul li:hover a, .nav ul li:hover{
+    color: yellow;
+    transition: all 0.1s ease-in 0s;
+    scale: 1.1;
+}
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner{
+   
+    width: 90%;
+    height: fit-content;
+    padding: 100px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    /* align-self: center; */
+    position: relative;
+    /* z-index: -1; */
+}
+.banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1599008633840-052c7f756385?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    opacity: 0.8;
+    z-index: -2;
+}
+.banner p{
+    /* height: 30%; */
+    /* width: 60%; */
+    text-align: center;
+    align-content: flex-start;
+    color: white;
+    font-family: cursive;
+    font-weight: bold;
+}
+.word-any{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-family: 'Rubik Mono One', monospace;
+    color: rgb(0, 0, 0);
+}
+.veri-text{
+    font-size: 30px;
+    font-family: 'Rubik Mono One', monospace;
+    color: transparent;
+    position: relative;
+}
+.veri-text::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: green;
+    border-right: 5px solid black;
+    overflow: hidden;
+    animation: animate 10s ease 0.2s infinite forwards;
+}
+@keyframes animate {
+    0%{
+        content: "notebooks";
+        width: 0;
+        color: green;
+    }
+    33%{
+        content: "notebooks";
+        width: 105%;
+        color:yellow ;
+        
+    }
+    33.1%{
+        content: "blogs";
+        width: 0;
+        color: blue;
+    }
+    66%{
+        content: "blogs";
+        width: 60%;
+        color: yellow;
+    }
+    66.1%{
+        content: "books";
+        width: 0;
+        color: brown;
+    }
+    99.9%{
+        content: "books";
+        width: 60%;
+        color: yellow;
+    }
+}
+.search{
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    width: 25%;
+    height: 40px;
+
+    display: flex;
+}
+.search input{
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: white;
+}
+::placeholder{
+    color: white;
+}
+.search button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.search button svg{
+    height: 100%;
+    width: 100%;
+}
+.social-links ul li a svg{
+    height: 30px;
+    width: 30px;
+    
+}
+.content1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 20px;
+
+    text-align: center;
+    gap: 10px;
+}
+.content2{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    /* background-color: rgba(128, 128, 128, 0.877); */
+
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+.cont3{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.cont{
+    width: 40%;
+    height: fit-content;
+    /* background-color: red; */
+}
+.cont button, .details button{
+    width: 70%;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cont button:hover, .details button:hover{
+    background-color: yellow;
+    transition: all 0.1s ease-in;
+    scale: 1.01;
+    color: black;
+    border: 1px solid black;
+}
+.books img, .books{
+    height: 500px;
+    width: 500px;
+    /* border-radius: 100%; */
+    position: relative;
+    border-radius: 100%;
+}
+.books::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 62, 62, 0.111);
+    z-index: -1;
+    border-radius: 50%;
+}
+.note-books{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-self: flex-start; */
+
+    gap: 10px;
+}
+.note-books h1{
+    padding-bottom: 40px;
+    font-family: 'Rubik Mono One', monospace;
+    position: relative;
+}
+.note-books h1::after{
+    content: "(Wings of fire)";
+    position: absolute;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    top: 30px;
+    right: 20px;
+
+}
+.wings h1{
+    padding-bottom: 40px;
+    font-family: 'Rubik Mono One', monospace;
+    position: relative;
+}
+.wings h1::after{
+    content: "(ITC Limited)";
+    position: absolute;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    top: 30px;
+    right: 20px;
+
+}
+.cont3d{
+    margin: 0px;
+    padding: 0;
+    position: relative;
+}
+.cont3d::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: gray; */
+    z-index: -1;
+    background-image: url("360_F_374297591_G87LOnvKrZNgNaX4fEBjjxniLJuGtQK0-removebg-preview.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    back
+    /* overflow: visible; */
+}
+.h1{
+    font-size: 30px;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+}
+.popular-books{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 70px;
+    padding: 30px 50px;
+}
+.card{
+    width: 25%;
+    height: fit-content;
+    /* background-color: red; */
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.img img{
+    height: 200px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.price{
+    font-weight: bold;
+
+}
+.developer{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    /* gap: 20px; */
+
+}
+.img1{
+    width: fit-content;
+}
+.img1 img{
+    height: 40%;
+    width: 40%;
+    border-radius: 100%;
+    /* border: 1px solid black; */
+    
+}
+.disc{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 100px;
+}
+.h12{
+    font-family: 'Rubik Mono One', monospace;
+}
+.social-links ul{
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+   
+}
+.social-links ul li{
+    transition: all 0.1s ease;
+}
+.social-links ul li:hover{
+    scale: 1.05;
+    transform: translateY(-10px);
+    /* transition: all 0.1s ease; */
+    /* color: red; */
+}
+footer{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    background-color: rgb(229, 229, 229);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
+.heading{
+    font-size: 30px;
+    font-family: 'Rubik Mono One', monospace;
+    border-bottom: 1px solid black;
+    /* align-self: flex-start; */
+}
+.links{
+    width: 100%;
+    height: fit-content;
+    padding: 30px 0px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.boat ul{
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* font-size: 30px; */
+    /* color: black; */
+    text-align: center;
+}
+.boat ul li a{
+    color: rgb(59, 58, 58);
+    transition: all 0.2s ease;
+}
+.boat ul li a:hover{
+    color: blue;
+    text-decoration: underline;
+    /* transition: all 0.2s ease; */
+}
