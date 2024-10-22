@@ -51,7 +51,8 @@ header{
     font-size: 16px;
 }
 .nav ul li:hover a, .nav ul li:hover{
-    color: yellow;
+    color: rgb(0, 161, 11);
+    /* border-bottom: 1px solid black; */
     transition: all 0.1s ease-in 0s;
     scale: 1.1;
 }
@@ -309,16 +310,19 @@ section{
     left: 0;
     /* background-color: gray; */
     z-index: -1;
-    background-image: url("360_F_374297591_G87LOnvKrZNgNaX4fEBjjxniLJuGtQK0-removebg-preview.png");
+    background-image: url("imgs/360_F_374297591_G87LOnvKrZNgNaX4fEBjjxniLJuGtQK0-removebg-preview.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     back
     /* overflow: visible; */
 }
+
 .h1{
+    
     font-size: 30px;
 }
+
 article{
     display: flex;
     flex-direction: column;
