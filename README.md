@@ -1,4 +1,4 @@
-### LinkedIn Project Description: Notebook Wala
+
 
 **Project Name:** Notebook Wala
 
